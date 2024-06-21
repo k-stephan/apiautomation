@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-20T11:33:27 PDT" name="Suite" finished-at="2024-06-20T11:33:32 PDT" duration-ms="5499">
+    <groups>
+    </groups>
+    <test started-at="2024-06-20T11:33:27 PDT" name="Test" finished-at="2024-06-20T11:33:32 PDT" duration-ms="5499">
+      <class name="trello.trellopost">
+        <test-method signature="trellopostapi()[pri:0, instance:trello.trellopost@76508ed1]" started-at="2024-06-20T11:33:27 PDT" name="trellopostapi" finished-at="2024-06-20T11:33:32 PDT" duration-ms="5461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trellopostapi -->
+      </class> <!-- trello.trellopost -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
