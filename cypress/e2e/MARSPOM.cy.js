@@ -2,9 +2,9 @@
 import login from "../POM/BaseLogin.js"
 import findfirm from "../POM/FindFirm.js"
 
-describe('Base_Login', ()=>
+describe('Base_Login(smoke)', ()=>
 {
-    it('Login_pom', ()=>
+    it('Login_pom smoke', ()=>
         {
             Cypress.session.clearAllSavedSessions
             cy.visit(Cypress.env('baseUrl'))
@@ -27,6 +27,5 @@ describe('Base_Login', ()=>
             cy.wait(10000)
     
         })
-
 
 });

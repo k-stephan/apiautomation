@@ -4,14 +4,21 @@
   "description": "cypressfirstproject",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "test:smoke": "cypress run --env grep=\"Smoke\"",
+     "test:tag:Sanity": "cypress run --env grepTags=\"Sanity\""
+
   },
   "author": "steve",
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.12.0"
   },
-  
-    "include": ["./node_modules/cypress", "cypress/**/*.js"]
-  
+  "include": [
+    "./node_modules/cypress",
+    "cypress/**/*.js"
+  ],
+  "devDependencies": {
+    "@cypress/grep": "^4.0.2"
+  }
 }
