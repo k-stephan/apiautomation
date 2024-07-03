@@ -5,20 +5,23 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "test:smoke": "cypress run --env grep=\"Smoke\"",
-     "test:tag:Sanity": "cypress run --env grepTags=\"Sanity\""
-
+    "test:smoke": "cypress run --env grep=\"Smoke\"",
+    "test:tag:Sanity": "cypress run --env grepTags=\"Sanity\"",
+    "cypress:open": "cypress open"
   },
   "author": "steve",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.12.0"
+    "cypress": "^13.12.0",
+    "oracledb": "^6.5.1",
+    "save-dev": "^0.0.1-security"
   },
   "include": [
     "./node_modules/cypress",
     "cypress/**/*.js"
   ],
   "devDependencies": {
-    "@cypress/grep": "^4.0.2"
+    "@cypress/grep": "^4.0.2",
+    "cypress-sql-server": "^1.0.0"
   }
 }

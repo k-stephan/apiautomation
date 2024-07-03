@@ -2,6 +2,8 @@ describe('Group TCS Suite Smoke 1', () => {
 
     it('smoke Test',{ tags: '@smoke' }, () => {
         expect(true).to.be.true
+        
+    
     });
 
     it('Regression Test' ,{ tags: '@sanity' }, () => {

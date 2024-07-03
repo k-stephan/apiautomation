@@ -1,52 +1,73 @@
 /// <reference types="Cypress" />
 
 const { defineConfig } = require("cypress");
+const sqlServer = require('cypress-sql-server');
+const oracledb = require("oracledb");
+
+oracledb.initOracleClient({ libDir: "D:/Oracle12c/product/12.2.0/client_1/bin"});
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+
       on('task',
         {
-          queryDb: query => { return queryTestDb(query, config) },
+          sqlQuery: (query) => {
+            return queryData(query, config.env.db);
+          },
+
         });
+
+      /*config.db = {
+        userName: "mars",
+        password: "mars",
+        server: "192.168.169.60:1721/IND510",
+        options: {
+            database: "ora19_mob_qa1.phxa.com",
+            encrypt: true,
+            rowCollectionOnRequestCompletion : true
+        }
+    }*/
+
+      // implement node event listeners here
+      
 
       require('@cypress/grep/src/plugin')(config);
       return config;
 
     },
-    
+    experimentalStudio: true,
+
     testIsolation: false,
 
-    env: {
-      "baseUrl": "https://marsqa1.phxa.com/MARSWeb2/login.aspx?",
-      "db": 
-      {
-      "user": "mars",
-      "password": "mars",
-      "connectString" : "192.168.169.60:1721/IND510"
+    //"nodeVersion": "system",
+    "env": {
+      "db": {
+          "user": "mars",
+          "password": "mars",
+          "connectString" : "192.168.169.60:1721/IND510"
+      }
     }
-
-      },
      
   },
 
-});
+})
 
-function queryTestDb(query, config) 
-{
-  // creates a new mysql connection using credentials from cypress.json env's
-  const connection = mysql.createConnection(config.env.db)
-  // start connection to db
-  connection.connect()
-  // exec query + disconnect to db as a Promise
-  return new Promise((resolve, reject) => {
-      connection.query(query, (error, results) => {
-          if (error) reject(error)
-          else {
-              connection.end()
-              return resolve(results)
-          }
-      })
-  })
+const queryData = async(query, dbconfig) => {
+  let conn;
+  try{
+      conn = await oracledb.getConnection(dbconfig);
+      return result = await conn.execute(query);
+  }catch(err){
+      console.log("Error===>"+err)
+      return err
+  } finally{
+    if(conn){
+      try{
+        conn.close();
+      }catch(err){
+        console("Error===>"+err);
+      }
+    }
+  }
 }

@@ -4,10 +4,17 @@ import findfirm from "../POM/FindFirm.js"
 
 describe('Base_Login(smoke)', ()=>
 {
+
+    before(() => {
+
+        Cypress.session.clearAllSavedSessions
+        cy.visit(Cypress.env('baseUrl'))
+        
+    })
+
+
     it('Login_pom smoke', ()=>
         {
-            Cypress.session.clearAllSavedSessions
-            cy.visit(Cypress.env('baseUrl'))
                 cy.fixture('Login_Credentials').then(function(data)
                 {
                     const nl=new login();

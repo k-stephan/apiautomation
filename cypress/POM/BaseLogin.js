@@ -16,10 +16,13 @@ class login
     
     clicklogin()
     {
+
         cy.get(locators.loginlocators.clklogin).click()
         
-            if (cy.get(locators.loginlocators.recurrmodelalert).should('contain','Recurring Reports Expiring Soon')) 
+            if (cy.get(locators.loginlocators.recurrmodelalert).should('exist'))
                 {
+                    (cy.get(locators.loginlocators.recurrmodelalert).should('contain','Recurring Reports Expiring Soon')) 
+                
                     cy.get(locators.loginlocators.btnclose).click()
                 }
     }
