@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="trello.trellopost">
+      <class name="mars.marsapi">
         <methods>
-          <include name="trellopostapi"/>
+          <include name="bearertoken"/>
         </methods>
-      </class> <!-- trello.trellopost -->
+      </class> <!-- mars.marsapi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
