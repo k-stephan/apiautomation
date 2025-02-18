@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="MergeMove - TestSuite" id="90d4f206-092f-4fff-8850-5261d62e6f0f" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FOR Merge Move" searchProperties="true" id="d5adfab9-40bf-4e18-83f6-099591f46635" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="properties" name="Properties" id="c9af30e1-d333-4748-a93b-8ca5712926f1"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>FrmName</con:name><con:value>FRM ${=import java.text.SimpleDateFormat ; new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())}</con:value></con:property><con:property><con:name>OffName</con:name><con:value>OFF ${=import java.text.SimpleDateFormat ; new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())}</con:value></con:property><con:property><con:name>RepName</con:name><con:value>REP ${=import java.text.SimpleDateFormat ; new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())}</con:value></con:property><con:property><con:name>F1</con:name><con:value>64172</con:value></con:property><con:property><con:name>O1</con:name><con:value>197242</con:value></con:property><con:property><con:name>R1</con:name><con:value>342213</con:value></con:property><con:property><con:name>F2</con:name><con:value>64173</con:value></con:property><con:property><con:name>O2</con:name><con:value>197244</con:value></con:property><con:property><con:name>R2</con:name><con:value>342214</con:value></con:property><con:property><con:name>HomeOff</con:name><con:value>HOFF ${=import java.text.SimpleDateFormat ; new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date())}</con:value></con:property><con:property><con:name>CdataFrmId</con:name><con:value><![CDATA[<MarsFirmDataSet xmlns="http://tempuri.org/MarsFirm.xsd">
+  <FIRM>
+    <FIRM_ID>64173</FIRM_ID>
+    <EXTERNAL_FIRM_ID />
+    <FIRM_COMMENT />
+    <FIRM_NAME>FRM 2021.10.04.15.53.10</FIRM_NAME>
+    <FIRM_NAME_CAPS>FRM 2021.10.04.15.53.10</FIRM_NAME_CAPS>
+    <SHORT_NAME>NF</SHORT_NAME>
+    <SHORT_NAME_CAPS>NF</SHORT_NAME_CAPS>
+    <HOME_OFFICE_ID>197243</HOME_OFFICE_ID>
+    <NUMBER_OF_REG_STATES>-1</NUMBER_OF_REG_STATES>
+    <GEO_CONC />
+    <LAST_FIRM_NOTE_DATE />
+    <ADDRESS_ID />
+    <FIRM_TYPE>BK</FIRM_TYPE>
+    <WEB_SITE />
+    <STATUS_CD>Active</STATUS_CD>
+    <PARENT_FIRM_ID />
+    <STATUS_UPDATE_DATE>10/4/2021 3:53:00 AM</STATUS_UPDATE_DATE>
+    <NEW_FIRM_TYPE />
+    <SALES_GOAL_AMOUNT>0</SALES_GOAL_AMOUNT>
+    <ENTRY_DATE>10/4/2021 3:53:00 AM</ENTRY_DATE>
+    <ENTRY_USER>KMILLER </ENTRY_USER>
+    <UPDATE_DATE>10/4/2021 3:53:00 AM</UPDATE_DATE>
+    <UPDATE_USER>MARSINTG</UPDATE_USER>
+    <KEY_ACCT_TERR />
+    <NSCC_FIRM_NBR />
+    <SDR_FLG />
+    <CALL_CD>1</CALL_CD>
+    <MAIL_CD>1</MAIL_CD>
+    <EMAIL_CD>1</EMAIL_CD>
+    <CRD_ID />
+    <PRIM_PHONE>1234567</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX />
+    <EXTERNAL_ID />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <REP_TERR_BASED_ON>R</REP_TERR_BASED_ON>
+    <OFFICE_NM>HOFF 2021.10.04.15.53.10</OFFICE_NM>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <DELINK_FLG />
+    <AUM_AMT>0</AUM_AMT>
+    <PARENT_FIRM_EXTERNAL_ID />
+    <RECORD_TYPE>F</RECORD_TYPE>
+    <PARENT_FIRM_FLG />
+    <SEC_NBR />
+    <FIRM_SFDC_ID />
+    <EXTERNAL_FIRM_TYPE_ID>a066S00001G8agzQAB</EXTERNAL_FIRM_TYPE_ID>
+    <PARENT_FIRM_SFDC_ID />
+  </FIRM>
+</MarsFirmDataSet>]]></con:value></con:property><con:property><con:name>CdataOffId</con:name><con:value><![CDATA[<MarsOfficeDataSet xmlns="http://tempuri.org/MarsOffice.xsd">
+  <OFFICE>
+    <OFFICE_ID>197244</OFFICE_ID>
+    <EXTERNAL_OFFICE_ID />
+    <FIRM_ID>64173</FIRM_ID>
+    <EXTERNAL_FIRM_ID />
+    <OFFICE_NM>OFF 2021.10.04.15.53.11</OFFICE_NM>
+    <OFFICE_NM_CAPS>OFF 2021.10.04.15.53.11</OFFICE_NM_CAPS>
+    <ADDR_ID>149723</ADDR_ID>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PHONE>123456789</PHONE>
+    <EXTENSION />
+    <FAX />
+    <STATUS_CD>Active</STATUS_CD>
+    <OFFICE_FIRM_TYPE>DC</OFFICE_FIRM_TYPE>
+    <ENTRY_DATE>10/4/2021 3:53:00 AM</ENTRY_DATE>
+    <ENTRY_USR>KMILLER </ENTRY_USR>
+    <UPDATE_DATE>10/4/2021 3:53:00 AM</UPDATE_DATE>
+    <UPDATE_USR>MARSINTG</UPDATE_USR>
+    <OFFICE_MANAGER_ID />
+    <NUMBER_OF_REPS />
+    <TIMEZONE />
+    <LAST_MEETING_DATE />
+    <OFFICE_COMMENT />
+    <STATUS_UPDATE_DATE>10/4/2021 3:53:00 AM</STATUS_UPDATE_DATE>
+    <NEW_OFFICE_FIRM_TYPE />
+    <WEB_SITE />
+    <HOME_OFF_FLAG>N</HOME_OFF_FLAG>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <LATITUDE>42.8142</LATITUDE>
+    <LONGITUDE>-73.9396</LONGITUDE>
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <CITY_CAPS>GENERAL ELECTRIC</CITY_CAPS>
+    <FIRM_NM>FRM 2021.10.04.15.53.10</FIRM_NM>
+    <FIRM_NM_CAPS>FRM 2021.10.04.15.53.10</FIRM_NM_CAPS>
+    <LAST_SALE_DT />
+    <FIRM_TYPE_OVERRIDE_FLG>Y</FIRM_TYPE_OVERRIDE_FLG>
+    <DELINK_FLG />
+    <FIRM_RECORD_TYPE>F</FIRM_RECORD_TYPE>
+    <EXTERNAL_FIRMSUM_ID />
+    <EXTERNAL_FIRM_TYPE_ID>a066S00001G8ah3QAB</EXTERNAL_FIRM_TYPE_ID>
+  </OFFICE>
+</MarsOfficeDataSet>]]></con:value></con:property><con:property><con:name>CdataRepId</con:name><con:value><![CDATA[<MarsRepDataSet xmlns="http://tempuri.org/MarsRep1.xsd">
+  <REP>
+    <REP_ID>342214</REP_ID>
+    <FIRM_ID>64173</FIRM_ID>
+    <OFF_ID>197244</OFF_ID>
+    <FIRST_NM>REP 2021.10.04.15.53.12</FIRST_NM>
+    <LAST_NM>Hyd</LAST_NM>
+    <LAST_NM_CAPS>HYD</LAST_NM_CAPS>
+    <TITLE />
+    <SALUTATION />
+    <BIRTH_MMDD />
+    <BIRTH_YYYY />
+    <NICK_NM />
+    <SPOUSE_NM />
+    <PERSONAL_INFO />
+    <FIRST_SALE_DT />
+    <ASST_NM />
+    <SALES_STAT_CD>X</SALES_STAT_CD>
+    <LAST_SALE_DT />
+    <ORIG_CD />
+    <LAST_MTG_DT />
+    <LAST_CALL_DT />
+    <LAST_NOTE_DT />
+    <LAST_FULFILLMENT_DT />
+    <LAST_LETTER_DT />
+    <MAIL_LIST />
+    <ADDR1>Hyd</ADDR1>
+    <ADDR2 />
+    <ADDR3 />
+    <ADDR4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PRIM_PHONE>345354654</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX>0</PRIM_FAX>
+    <TIME_ZONE />
+    <REP_STAFF_CD>R</REP_STAFF_CD>
+    <STAT_CD>Active</STAT_CD>
+    <EMAIL_ID />
+    <EMAIL_ID2 />
+    <REP_COMMENT />
+    <PREFIX_NM />
+    <MIDDLE_NM />
+    <SUFFIX_NM />
+    <REP_FIRM_TYPE>DC</REP_FIRM_TYPE>
+    <STAT_UPD_DT>10/4/2021 3:53:00 AM</STAT_UPD_DT>
+    <ALLOW_MAILINGS>N</ALLOW_MAILINGS>
+    <FIRST_SALE_PROCESS_DT />
+    <HOUSE_REP>X</HOUSE_REP>
+    <EXTERNAL_REP_ID />
+    <EXTERNAL_OFF_ID />
+    <EXTERNAL_FIRM_ID />
+    <ADDRESS_LOCKED>N</ADDRESS_LOCKED>
+    <ENTRY_USR>KMILLER </ENTRY_USR>
+    <ENTRY_DT>10/4/2021 3:53:00 AM</ENTRY_DT>
+    <UPD_USR>MARSINTG</UPD_USR>
+    <UPD_DT>10/4/2021 3:53:00 AM</UPD_DT>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <CRD_ID />
+    <LATITUDE />
+    <LONGITUDE />
+    <DONOTCALL />
+    <DONOTMAIL />
+    <DONOTEMAIL />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <RECORD_TYPE>I</RECORD_TYPE>
+    <SEARCH_STATE_ID>NY</SEARCH_STATE_ID>
+    <SEARCH_COUNTRY_CD>US</SEARCH_COUNTRY_CD>
+    <SEARCH_PRIM_PHONE>345354654           </SEARCH_PRIM_PHONE>
+    <SEARCH_TIME_ZONE />
+    <SEARCH_ZIP>12345</SEARCH_ZIP>
+    <SEARCH_CITY>GENERAL ELECTRIC</SEARCH_CITY>
+    <FIRST_NM_CAPS>REP 2021.10.04.15.53.12</FIRST_NM_CAPS>
+    <REP_REGISTRATION />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+    <PRIM_MOBILE />
+    <DELINK_FLG />
+    <ALTERNATE_NM />
+    <TEAM_GRP_NM />
+    <EXTERNAL_FIRMSUM_ID />
+    <MARS_PRODUCER_FLG>N</MARS_PRODUCER_FLG>
+    <WEB_SITE />
+    <PRIOR_FIRM_NM />
+    <EXTERNAL_FIRM_TYPE_ID>a066S00001G8ah3QAB</EXTERNAL_FIRM_TYPE_ID>
+    <FIRM_NM>FRM 2021.10.04.15.53.10</FIRM_NM>
+  </REP>
+</MarsRepDataSet>]]></con:value></con:property><con:property><con:name>MoveMergeId</con:name><con:value>446</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" name="Insert New Firm 1" id="1f54ae0b-2adf-4d3b-a985-26d89903f8f5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertFirm</con:operation><con:request name="Insert New Firm 1" id="2b6a8bdb-2f6a-4c79-9f82-c545802ed2bc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertFirm>
+         <!--Optional:-->
+         <for:firmData><![CDATA[<MarsFirmDataSet xmlns="http://tempuri.org/MarsFirm.xsd">
+  <FIRM>
+    <EXTERNAL_FIRM_ID />
+    <FIRM_COMMENT />
+    <FIRM_NAME>${Properties#FrmName}</FIRM_NAME>
+    <FIRM_NAME_CAPS>${Properties#FrmName}</FIRM_NAME_CAPS>
+    <SHORT_NAME>NF</SHORT_NAME>
+    <SHORT_NAME_CAPS>NF</SHORT_NAME_CAPS>
+    <NUMBER_OF_REG_STATES>-1</NUMBER_OF_REG_STATES>
+    <GEO_CONC />
+    <LAST_FIRM_NOTE_DATE />
+    <ADDRESS_ID />
+    <FIRM_TYPE>BK</FIRM_TYPE>
+    <WEB_SITE />
+    <STATUS_CD>Active</STATUS_CD>
+    <PARENT_FIRM_ID>xx</PARENT_FIRM_ID>
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_FIRM_TYPE />
+    <SALES_GOAL_AMOUNT />
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USER>${#Project#Username}</ENTRY_USER>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USER>${#Project#Username}</UPDATE_USER>
+    <KEY_ACCT_TERR />
+    <NSCC_FIRM_NBR />
+    <SDR_FLG />
+    <CALL_CD>1</CALL_CD>
+    <MAIL_CD>1</MAIL_CD>
+    <EMAIL_CD>1</EMAIL_CD>
+    <CRD_ID />
+    <PRIM_PHONE>1234567</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX />
+    <EXTERNAL_ID />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <REP_TERR_BASED_ON>R</REP_TERR_BASED_ON>
+    <OFFICE_NM>${Properties#OffName}</OFFICE_NM>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+  </FIRM>
+</MarsFirmDataSet>]]]]>><![CDATA[</for:firmData>
+         <!--Optional:-->
+         <for:officeData><![CDATA[<MarsOfficeDataSet xmlns="http://tempuri.org/MarsOffice.xsd">
+  <OFFICE>
+    <EXTERNAL_OFFICE_ID />
+    <EXTERNAL_FIRM_ID />
+    <OFFICE_NM>${Properties#HomeOff}</OFFICE_NM>
+    <OFFICE_NM_CAPS>NF OFF</OFFICE_NM_CAPS>
+    <ADDR_ID>81270</ADDR_ID>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PHONE>1234567</PHONE>
+    <EXTENSION />
+    <FAX />
+    <STATUS_CD>Active</STATUS_CD>
+    <OFFICE_FIRM_TYPE>BK</OFFICE_FIRM_TYPE>
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USR>${#Project#UpdatedUser}</ENTRY_USR>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USR>${#Project#Username}</UPDATE_USR>
+    <OFFICE_MANAGER_ID />
+    <NUMBER_OF_REPS />
+    <TIMEZONE />
+    <LAST_MEETING_DATE />
+    <OFFICE_COMMENT />
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_OFFICE_FIRM_TYPE />
+    <WEB_SITE />
+    <HOME_OFF_FLAG>Y</HOME_OFF_FLAG>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <LATITUDE>42.81424320</LATITUDE>
+    <LONGITUDE>-73.93956870</LONGITUDE>
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <CITY_CAPS>GENERAL ELECTRIC</CITY_CAPS>
+    <FIRM_NM>New Firm</FIRM_NM>
+    <FIRM_NM_CAPS>NEW FIRM</FIRM_NM_CAPS>
+    <LAST_SALE_DT />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </OFFICE>
+</MarsOfficeDataSet>]]]]>><![CDATA[</for:officeData>
+      </for:InsertFirm>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1cb106bc-84e1-49cd-92a1-d528df1b9965"/><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer Firm Id After Insert 1" id="fc31d2d1-0ef7-48c5-a644-65d4f08bec70"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Transfer Firm Id After Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Firm 1</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertFirmResult</con:sourcePath><con:targetType>CdataFrmId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>Firm Id</con:name><con:sourceType>CdataFrmId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsFirm.xsd';
+//ns1:FIRM_ID</con:sourcePath><con:targetType>F1</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Insert New Office 1" id="09cdbd56-ea8c-45ca-80eb-8d36f7abd9be"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertOffice</con:operation><con:request name="Insert New Office 1" id="51200939-946c-4d1c-908f-144162624039"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertOffice>
+         <!--Optional:-->
+         <for:officeData><![CDATA[<MarsOfficeDataSet xmlns="http://tempuri.org/MarsOffice.xsd">
+  <OFFICE>
+    <EXTERNAL_OFFICE_ID />
+    <FIRM_ID>${Properties#F1}</FIRM_ID>
+    <EXTERNAL_FIRM_ID></EXTERNAL_FIRM_ID>
+    <OFFICE_NM>${Properties#OffName}</OFFICE_NM>
+    <OFFICE_NM_CAPS>${Properties#OffName}.toUpperCase()</OFFICE_NM_CAPS>
+    <ADDR_ID>81302</ADDR_ID>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PHONE>123456789</PHONE>
+    <EXTENSION />
+    <FAX />
+    <STATUS_CD>Active</STATUS_CD>
+    <OFFICE_FIRM_TYPE>DC</OFFICE_FIRM_TYPE>
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USR>${#Project#Username}</ENTRY_USR>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USR>${#Project#UpdatedUser}</UPDATE_USR>
+    <OFFICE_MANAGER_ID />
+    <NUMBER_OF_REPS />
+    <TIMEZONE />
+    <LAST_MEETING_DATE />
+    <OFFICE_COMMENT />
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_OFFICE_FIRM_TYPE />
+    <WEB_SITE />
+    <HOME_OFF_FLAG>N</HOME_OFF_FLAG>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <LATITUDE>42.81424320</LATITUDE>
+    <LONGITUDE>-73.93956870</LONGITUDE>
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <CITY_CAPS>GENERAL ELECTRIC</CITY_CAPS>
+    <LAST_SALE_DT />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </OFFICE>
+</MarsOfficeDataSet>]]]]>><![CDATA[</for:officeData>
+      </for:InsertOffice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d3d50003-07fd-41ad-a5e3-8a1626b5ce4d"/><con:credentials><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Trasfer Office Id After Insert 1" id="3d520990-3274-4f5c-9841-31a000d62db1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Trasfer Office Id After Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Office 1</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertOfficeResult</con:sourcePath><con:targetType>CdataOffId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" transferToAll="false"><con:name>Office Id</con:name><con:sourceType>CdataOffId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsOffice.xsd';
+//ns1:OFFICE_ID</con:sourcePath><con:targetType>O1</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Insert New Rep 1" id="6ca3f331-475c-4c32-be7a-192f784c4f78"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertRep</con:operation><con:request name="Insert New Rep 1" id="c9a04263-ea63-4055-8540-0c93b47fd03a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertRep>
+         <!--Optional:-->
+         <for:repData><![CDATA[
+         <MarsRepDataSet xmlns="http://tempuri.org/MarsRep1.xsd">
+  <REP>
+    <FIRM_ID>${Properties#F1}</FIRM_ID>
+    <OFF_ID>${Properties#O1}</OFF_ID>
+    <FIRST_NM>${Properties#RepName}</FIRST_NM>
+    <LAST_NM>Hyd</LAST_NM>
+    <LAST_NM_CAPS>HYD</LAST_NM_CAPS>
+    <TITLE />
+    <SALUTATION />
+    <BIRTH_MMDD />
+    <BIRTH_YYYY />
+    <NICK_NM />
+    <SPOUSE_NM />
+    <PERSONAL_INFO />
+    <FIRST_SALE_DT />
+    <ASST_NM />
+    <SALES_STAT_CD>X</SALES_STAT_CD>
+    <LAST_SALE_DT />
+    <ORIG_CD />
+    <LAST_MTG_DT />
+    <LAST_CALL_DT />
+    <LAST_NOTE_DT />
+    <LAST_FULFILLMENT_DT />
+    <LAST_LETTER_DT />
+    <MAIL_LIST />
+    <ADDR1>address</ADDR1>
+    <ADDR2 />
+    <ADDR3 />
+    <ADDR4 />
+    <CITY>Chapparal</CITY>
+    <STATE_ID>NM</STATE_ID>
+    <ZIP>88021</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PRIM_PHONE>345354654</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX>0</PRIM_FAX>
+    <TIME_ZONE />
+    <REP_STAFF_CD>R</REP_STAFF_CD>
+    <STAT_CD>Active</STAT_CD>
+    <EMAIL_ID />
+    <EMAIL_ID2 />
+    <REP_COMMENT />
+    <PREFIX_NM />
+    <MIDDLE_NM />
+    <SUFFIX_NM />
+    <REP_FIRM_TYPE>DC</REP_FIRM_TYPE>
+    <STAT_UPD_DT>${#Project#EntryDate}</STAT_UPD_DT>
+    <ALLOW_MAILINGS>N</ALLOW_MAILINGS>
+    <FIRST_SALE_PROCESS_DT />
+    <HOUSE_REP>X</HOUSE_REP>
+    <EXTERNAL_REP_ID></EXTERNAL_REP_ID>
+    <EXTERNAL_OFF_ID></EXTERNAL_OFF_ID>
+    <EXTERNAL_FIRM_ID></EXTERNAL_FIRM_ID>
+    <ADDRESS_LOCKED>N</ADDRESS_LOCKED>
+    <ENTRY_USR>${#Project#Username}</ENTRY_USR>
+    <ENTRY_DT>${#Project#EntryDate}</ENTRY_DT>
+    <UPD_USR>${#Project#UpdatedUser}</UPD_USR>
+    <UPD_DT>${#Project#EntryDate}</UPD_DT>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <CRD_ID />
+    <LATITUDE />
+    <LONGITUDE />
+    <DONOTCALL />
+    <DONOTMAIL />
+    <DONOTEMAIL />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <RECORD_TYPE>I</RECORD_TYPE>
+    <SEARCH_STATE_ID>NM</SEARCH_STATE_ID>
+    <SEARCH_COUNTRY_CD>US</SEARCH_COUNTRY_CD>
+    <SEARCH_PRIM_PHONE>345354654           </SEARCH_PRIM_PHONE>
+    <SEARCH_TIME_ZONE />
+    <SEARCH_ZIP>88021</SEARCH_ZIP>
+    <SEARCH_CITY>CHAPPARAL</SEARCH_CITY>
+    <FIRST_NM_CAPS>RECYCLE</FIRST_NM_CAPS>
+    <REP_REGISTRATION />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </REP>
+</MarsRepDataSet>      
+         
+         ]]]]>><![CDATA[</for:repData>
+      </for:InsertRep>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="8d1df033-a6a8-48c1-bcd5-279842b9b0d0"/><con:credentials><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer Rep Id After Insert 1" id="47d8064b-beba-4c2d-84f9-972e944f8884"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Transfer Firm Id Before Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Rep 1</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertRepResult</con:sourcePath><con:targetType>CdataRepId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false"><con:name>Rep Id</con:name><con:sourceType>CdataRepId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsRep1.xsd';
+//ns1:REP_ID</con:sourcePath><con:targetType>R1</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Insert New Firm 2" id="e0973c95-1af0-448c-8273-94eecd014b15"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertFirm</con:operation><con:request name="Insert New Firm 2" id="f9f12135-68f4-41a6-8e8d-267be4e71cb8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertFirm>
+         <!--Optional:-->
+         <for:firmData><![CDATA[<MarsFirmDataSet xmlns="http://tempuri.org/MarsFirm.xsd">
+  <FIRM>
+    <EXTERNAL_FIRM_ID />
+    <FIRM_COMMENT />
+    <FIRM_NAME>${Properties#FrmName}</FIRM_NAME>
+    <FIRM_NAME_CAPS>${Properties#FrmName}</FIRM_NAME_CAPS>
+    <SHORT_NAME>NF</SHORT_NAME>
+    <SHORT_NAME_CAPS>NF</SHORT_NAME_CAPS>
+    <NUMBER_OF_REG_STATES>-1</NUMBER_OF_REG_STATES>
+    <GEO_CONC />
+    <LAST_FIRM_NOTE_DATE />
+    <ADDRESS_ID />
+    <FIRM_TYPE>BK</FIRM_TYPE>
+    <WEB_SITE />
+    <STATUS_CD>Active</STATUS_CD>
+    <PARENT_FIRM_ID>xx</PARENT_FIRM_ID>
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_FIRM_TYPE />
+    <SALES_GOAL_AMOUNT />
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USER>${#Project#Username}</ENTRY_USER>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USER>${#Project#UpdatedUser}</UPDATE_USER>
+    <KEY_ACCT_TERR />
+    <NSCC_FIRM_NBR />
+    <SDR_FLG />
+    <CALL_CD>1</CALL_CD>
+    <MAIL_CD>1</MAIL_CD>
+    <EMAIL_CD>1</EMAIL_CD>
+    <CRD_ID />
+    <PRIM_PHONE>1234567</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX />
+    <EXTERNAL_ID />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <REP_TERR_BASED_ON>R</REP_TERR_BASED_ON>
+    <OFFICE_NM>${Properties#OffName}</OFFICE_NM>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+  </FIRM>
+</MarsFirmDataSet>]]]]>><![CDATA[</for:firmData>
+         <!--Optional:-->
+         <for:officeData><![CDATA[<MarsOfficeDataSet xmlns="http://tempuri.org/MarsOffice.xsd">
+  <OFFICE>
+    <EXTERNAL_OFFICE_ID />
+    <EXTERNAL_FIRM_ID />
+    <OFFICE_NM>${Properties#HomeOff}</OFFICE_NM>
+    <OFFICE_NM_CAPS>NF OFF</OFFICE_NM_CAPS>
+    <ADDR_ID>81270</ADDR_ID>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PHONE>1234567</PHONE>
+    <EXTENSION />
+    <FAX />
+    <STATUS_CD>Active</STATUS_CD>
+    <OFFICE_FIRM_TYPE>BK</OFFICE_FIRM_TYPE>
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USR>${#Project#Username}</ENTRY_USR>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USR>${#Project#UpdatedUser}</UPDATE_USR>
+    <OFFICE_MANAGER_ID />
+    <NUMBER_OF_REPS />
+    <TIMEZONE />
+    <LAST_MEETING_DATE />
+    <OFFICE_COMMENT />
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_OFFICE_FIRM_TYPE />
+    <WEB_SITE />
+    <HOME_OFF_FLAG>Y</HOME_OFF_FLAG>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <LATITUDE>42.81424320</LATITUDE>
+    <LONGITUDE>-73.93956870</LONGITUDE>
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <CITY_CAPS>GENERAL ELECTRIC</CITY_CAPS>
+    <FIRM_NM>New Firm</FIRM_NM>
+    <FIRM_NM_CAPS>NEW FIRM</FIRM_NM_CAPS>
+    <LAST_SALE_DT />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </OFFICE>
+</MarsOfficeDataSet>]]]]>><![CDATA[</for:officeData>
+      </for:InsertFirm>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="07a132c4-df3e-4089-9466-9762a53192b1"/><con:credentials><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer Firm Id After Insert 2" id="8da2ecb4-12cb-4883-943d-9b52c0cd3aa1"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Transfer Firm Id After Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Firm 2</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertFirmResult</con:sourcePath><con:targetType>CdataFrmId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true"><con:name>Firm Id</con:name><con:sourceType>CdataFrmId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsFirm.xsd';
+//ns1:FIRM_ID</con:sourcePath><con:targetType>F2</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Insert New Office 2" id="e404ece3-6c05-4ddb-abf2-537f7428e7b8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertOffice</con:operation><con:request name="Insert New Office 2" id="4ed357b2-c32d-4399-9a0e-5332bc9cec0c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertOffice>
+         <!--Optional:-->
+         <for:officeData><![CDATA[<MarsOfficeDataSet xmlns="http://tempuri.org/MarsOffice.xsd">
+  <OFFICE>
+    <EXTERNAL_OFFICE_ID />
+    <FIRM_ID>${Properties#F2}</FIRM_ID>
+    <EXTERNAL_FIRM_ID></EXTERNAL_FIRM_ID>
+    <OFFICE_NM>${Properties#OffName}</OFFICE_NM>
+    <OFFICE_NM_CAPS>${Properties#OffName}.toUpperCase()</OFFICE_NM_CAPS>
+    <ADDR_ID>81302</ADDR_ID>
+    <ADDRESS1>Hyd</ADDRESS1>
+    <ADDRESS2 />
+    <ADDRESS3 />
+    <ADDRESS4 />
+    <CITY>General Electric</CITY>
+    <STATE_ID>NY</STATE_ID>
+    <ZIP>12345</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PHONE>123456789</PHONE>
+    <EXTENSION />
+    <FAX />
+    <STATUS_CD>Active</STATUS_CD>
+    <OFFICE_FIRM_TYPE>DC</OFFICE_FIRM_TYPE>
+    <ENTRY_DATE>${#Project#EntryDate}</ENTRY_DATE>
+    <ENTRY_USR>${#Project#Username}</ENTRY_USR>
+    <UPDATE_DATE>${#Project#EntryDate}</UPDATE_DATE>
+    <UPDATE_USR>${#Project#UpdatedUser}</UPDATE_USR>
+    <OFFICE_MANAGER_ID />
+    <NUMBER_OF_REPS />
+    <TIMEZONE />
+    <LAST_MEETING_DATE />
+    <OFFICE_COMMENT />
+    <STATUS_UPDATE_DATE>${#Project#EntryDate}</STATUS_UPDATE_DATE>
+    <NEW_OFFICE_FIRM_TYPE />
+    <WEB_SITE />
+    <HOME_OFF_FLAG>N</HOME_OFF_FLAG>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <LATITUDE>42.81424320</LATITUDE>
+    <LONGITUDE>-73.93956870</LONGITUDE>
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <CITY_CAPS>GENERAL ELECTRIC</CITY_CAPS>
+    <LAST_SALE_DT />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </OFFICE>
+</MarsOfficeDataSet>]]]]>><![CDATA[</for:officeData>
+      </for:InsertOffice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9c51d15f-a9b9-4d65-87b6-16801dcc1c03"/><con:credentials><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Trasfer Office Id After Insert 2" id="46ea3018-9d92-4bc0-a6c9-9a9c7e4e84a3"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Trasfer Office Id After Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Office 2</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertOfficeResult</con:sourcePath><con:targetType>CdataOffId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" entitize="false" transferToAll="false"><con:name>Office Id</con:name><con:sourceType>CdataOffId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsOffice.xsd';
+//ns1:OFFICE_ID</con:sourcePath><con:targetType>O2</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Insert New Rep 2" id="16e6fa6f-fcbf-486e-bee3-d1968d70ba12"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>FORServiceSoap</con:interface><con:operation>InsertRep</con:operation><con:request name="Insert New Rep 2" id="2a3797a8-9969-4608-b601-ad840177b45b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/FORService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:for="http://api.phxa.com/MARSIS/FORService">
+   <soapenv:Header>
+      <for:AuthHeader>
+         <!--Optional:-->
+         <for:Username>${#Project#Username}</for:Username>
+         <!--Optional:-->
+         <for:Password>${#Project#Password}</for:Password>
+      </for:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <for:InsertRep>
+         <!--Optional:-->
+         <for:repData><![CDATA[
+         <MarsRepDataSet xmlns="http://tempuri.org/MarsRep1.xsd">
+  <REP>
+    <FIRM_ID>${Properties#F2}</FIRM_ID>
+    <OFF_ID>${Properties#O2}</OFF_ID>
+    <FIRST_NM>${Properties#RepName}</FIRST_NM>
+    <LAST_NM>Hyd</LAST_NM>
+    <LAST_NM_CAPS>HYD</LAST_NM_CAPS>
+    <TITLE />
+    <SALUTATION />
+    <BIRTH_MMDD />
+    <BIRTH_YYYY />
+    <NICK_NM />
+    <SPOUSE_NM />
+    <PERSONAL_INFO />
+    <FIRST_SALE_DT />
+    <ASST_NM />
+    <SALES_STAT_CD>X</SALES_STAT_CD>
+    <LAST_SALE_DT />
+    <ORIG_CD />
+    <LAST_MTG_DT />
+    <LAST_CALL_DT />
+    <LAST_NOTE_DT />
+    <LAST_FULFILLMENT_DT />
+    <LAST_LETTER_DT />
+    <MAIL_LIST />
+    <ADDR1>address</ADDR1>
+    <ADDR2 />
+    <ADDR3 />
+    <ADDR4 />
+    <CITY>Chapparal</CITY>
+    <STATE_ID>NM</STATE_ID>
+    <ZIP>88021</ZIP>
+    <COUNTRY_CD>US</COUNTRY_CD>
+    <PRIM_PHONE>345354654</PRIM_PHONE>
+    <PRIM_PHONE_EXT />
+    <PRIM_FAX>0</PRIM_FAX>
+    <TIME_ZONE />
+    <REP_STAFF_CD>R</REP_STAFF_CD>
+    <STAT_CD>Active</STAT_CD>
+    <EMAIL_ID />
+    <EMAIL_ID2 />
+    <REP_COMMENT />
+    <PREFIX_NM />
+    <MIDDLE_NM />
+    <SUFFIX_NM />
+    <REP_FIRM_TYPE>DC</REP_FIRM_TYPE>
+    <STAT_UPD_DT>${#Project#EntryDate}</STAT_UPD_DT>
+    <ALLOW_MAILINGS>N</ALLOW_MAILINGS>
+    <FIRST_SALE_PROCESS_DT />
+    <HOUSE_REP>X</HOUSE_REP>
+    <EXTERNAL_REP_ID></EXTERNAL_REP_ID>
+    <EXTERNAL_OFF_ID></EXTERNAL_OFF_ID>
+    <EXTERNAL_FIRM_ID></EXTERNAL_FIRM_ID>
+    <ADDRESS_LOCKED>N</ADDRESS_LOCKED>
+    <ENTRY_USR>${#Project#Username}</ENTRY_USR>
+    <ENTRY_DT>${#Project#EntryDate}</ENTRY_DT>
+    <UPD_USR>${#Project#UpdatedUser}</UPD_USR>
+    <UPD_DT>${#Project#EntryDate}</UPD_DT>
+    <CALL_CD>1</CALL_CD>
+    <CALL_CD_OVERRIDE_FLG />
+    <MAIL_CD>1</MAIL_CD>
+    <MAIL_CD_OVERRIDE_FLG />
+    <EMAIL_CD>1</EMAIL_CD>
+    <EMAIL_CD_OVERRIDE_FLG />
+    <CRD_ID />
+    <LATITUDE />
+    <LONGITUDE />
+    <DONOTCALL />
+    <DONOTMAIL />
+    <DONOTEMAIL />
+    <CONFIRM_YN>Y</CONFIRM_YN>
+    <RECORD_TYPE>I</RECORD_TYPE>
+    <SEARCH_STATE_ID>NM</SEARCH_STATE_ID>
+    <SEARCH_COUNTRY_CD>US</SEARCH_COUNTRY_CD>
+    <SEARCH_PRIM_PHONE>345354654           </SEARCH_PRIM_PHONE>
+    <SEARCH_TIME_ZONE />
+    <SEARCH_ZIP>88021</SEARCH_ZIP>
+    <SEARCH_CITY>CHAPPARAL</SEARCH_CITY>
+    <FIRST_NM_CAPS>RECYCLE</FIRST_NM_CAPS>
+    <REP_REGISTRATION />
+    <FIRM_TYPE_OVERRIDE_FLG>N</FIRM_TYPE_OVERRIDE_FLG>
+  </REP>
+</MarsRepDataSet>      
+         
+         ]]]]>><![CDATA[</for:repData>
+      </for:InsertRep>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f6bdeefc-73c5-4928-a7af-1ad2af6e51cd"/><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Transfer Rep Id After Insert 2" id="52dca3c9-b51f-4993-8113-cbb5f3bbe73d"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Transfer Firm Id Before Insert</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>Insert New Rep 2</con:sourceStep><con:sourcePath>declare namespace ns1='http://api.phxa.com/MARSIS/FORService';
+//ns1:InsertRepResult</con:sourcePath><con:targetType>CdataRepId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" ignoreEmpty="false" useXQuery="false" transferChildNodes="false"><con:name>Rep Id</con:name><con:sourceType>CdataRepId</con:sourceType><con:sourceStep>Properties</con:sourceStep><con:sourcePath>declare namespace ns1='http://tempuri.org/MarsRep1.xsd';
+//ns1:REP_ID</con:sourcePath><con:targetType>R2</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="Move Rep (R1 to O2)" id="ffc8c4ef-7b19-4d7b-abcc-d51b087e151e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>MoveRep</con:operation><con:request name="Move Rep (R1 to O2)" id="ae90f11a-c505-44f7-baea-7bf9d34dbdef"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:MoveRep>
+         <!--Optional:-->
+         <mer:repID>${Properties#R1}</mer:repID>
+         <!--Optional:-->
+         <mer:targetOfficeID>${Properties#O2}</mer:targetOfficeID>
+         <!--Optional:-->
+         <mer:inativateAliasFlag>?</mer:inativateAliasFlag>
+         <!--Optional:-->
+         <mer:moveSalesAssetsFlag>?</mer:moveSalesAssetsFlag>
+         <!--Optional:-->
+         <mer:userID>${#Project#Username}</mer:userID>
+      </mer:MoveRep>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e7e10c2d-66e9-4a92-9482-5d337a86850d"/><con:assertion type="XPath Match" name="XPath Match" id="1bac4271-17f8-4474-86b5-2b38bd68cdb8"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//soap:Envelope/soap:Body</path><content><![CDATA[<soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MoveRepResponse xmlns="http://api.phxa.com/MARSIS/MergeMoveService">
+    <MoveRepResult>true</MoveRepResult>
+  </MoveRepResponse>
+</soap:Body>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Merge Rep (R1 to R2)" id="794e972d-38dd-4f2a-9588-7a249a45ef96"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>MergeRep</con:operation><con:request name="Merge Rep (R1 to R2)" id="82c48b1b-248d-4033-9d1a-40eb07f9a333"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:MergeRep>
+         <!--Optional:-->
+         <mer:repID>${Properties#R1}</mer:repID>
+         <!--Optional:-->
+         <mer:targetRepID>${Properties#R2}</mer:targetRepID>
+         <!--Optional:-->
+         <mer:inativateAliasFlag>?</mer:inativateAliasFlag>
+         <!--Optional:-->
+         <mer:moveSalesAssetsFlag>?</mer:moveSalesAssetsFlag>
+         <!--Optional:-->
+         <mer:userID>${#Project#Username}</mer:userID>
+      </mer:MergeRep>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b44c43cc-99d6-4b88-b49c-99f55f870052"/><con:assertion type="XPath Match" name="XPath Match" id="4dd0ccfe-39b2-43ae-bb97-d7f3ae0f9e6e"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//soap:Envelope/soap:Body</path><content><![CDATA[<soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MergeRepResponse xmlns="http://api.phxa.com/MARSIS/MergeMoveService">
+    <MergeRepResult>true</MergeRepResult>
+  </MergeRepResponse>
+</soap:Body>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Move Office (O1 to F2)" id="94e2d95b-9e14-4b2f-87bd-dd71c15df088"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>MoveOffice</con:operation><con:request name="Move Office (O1 to F2)" id="c5ad5d0e-70ee-4ec7-93a1-cea817b92327"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:MoveOffice>
+         <!--Optional:-->
+         <mer:officeID>${Properties#O1}</mer:officeID>
+         <!--Optional:-->
+         <mer:targetFirmID>${Properties#F2}</mer:targetFirmID>
+         <!--Optional:-->
+         <mer:inativateAliasFlag>?</mer:inativateAliasFlag>
+         <!--Optional:-->
+         <mer:moveSalesAssetsFlag>?</mer:moveSalesAssetsFlag>
+         <!--Optional:-->
+         <mer:userID>${#Project#Username}</mer:userID>
+      </mer:MoveOffice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7d0dd583-2bce-4f34-b9e6-b421aac486d1"/><con:assertion type="XPath Match" id="c33dae9f-594a-4e24-bdac-26869cae1d66" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//soap:Envelope/soap:Body</path><content><![CDATA[<soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+ <MoveOfficeResponse xmlns="http://api.phxa.com/MARSIS/MergeMoveService">
+         <MoveOfficeResult>true</MoveOfficeResult>
+      </MoveOfficeResponse>
+</soap:Body>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Merge Office (O1 to O2)" id="6170c716-575c-4886-acce-070f3c3e0195"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>MergeOffice</con:operation><con:request name="Merge Office (O1 to O2)" id="157594c0-c339-445c-8223-29cd3780e3cc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:MergeOffice>
+         <!--Optional:-->
+         <mer:officeID>${Properties#O1}</mer:officeID>
+         <!--Optional:-->
+         <mer:targetOfficeID>${Properties#O2}</mer:targetOfficeID>
+         <!--Optional:-->
+         <mer:inativateAliasFlag>?</mer:inativateAliasFlag>
+         <!--Optional:-->
+         <mer:moveSalesAssetsFlag>?</mer:moveSalesAssetsFlag>
+         <!--Optional:-->
+         <mer:userID>${#Project#Username}</mer:userID>
+      </mer:MergeOffice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b0d64331-69f1-4d62-8b8d-6870d9792175"/><con:assertion type="XPath Match" name="XPath Match" id="3ae90711-f1ee-465e-be48-880520f09545"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//soap:Envelope/soap:Body</path><content><![CDATA[<soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MergeOfficeResponse xmlns="http://api.phxa.com/MARSIS/MergeMoveService">
+    <MergeOfficeResult>true</MergeOfficeResult>
+  </MergeOfficeResponse>
+</soap:Body>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Merge Firm (F1 to F2)" id="844d9f50-2b41-4ac3-9705-de61725e66d9"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>MergeFirm</con:operation><con:request name="Merge Firm (F1 to F2)" id="38b9c569-f671-4642-91ef-cf37cafe2bb6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:MergeFirm>
+         <!--Optional:-->
+         <mer:firmID>${Properties#F1}</mer:firmID>
+         <!--Optional:-->
+         <mer:targetFirmID>${Properties#F2}</mer:targetFirmID>
+         <!--Optional:-->
+         <mer:inativateAliasFlag>?</mer:inativateAliasFlag>
+         <!--Optional:-->
+         <mer:moveSalesAssetsFlag>?</mer:moveSalesAssetsFlag>
+         <!--Optional:-->
+         <mer:userID>${#Project#Username}</mer:userID>
+      </mer:MergeFirm>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="c7bd7f9c-b33a-4ec9-b05d-3196d1323ef2"/><con:assertion type="XPath Match" name="XPath Match" id="f43d6672-f548-4857-a710-11a52683f65f"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+//soap:Envelope/soap:Body</path><content><![CDATA[<soap:Body xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MergeFirmResponse xmlns="http://api.phxa.com/MARSIS/MergeMoveService">
+    <MergeFirmResult>true</MergeFirmResult>
+  </MergeFirmResponse>
+</soap:Body>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:tearDownScript>testRunner.testCase.testSuite.project.testSuites["Scripts"].testCases["Reporting"].testSteps["CSVFile"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Move Merge Transactions" searchProperties="true" id="96a89c9e-196b-4392-859c-4ccd04c471de" disabled="true"><con:settings/><con:testStep type="jdbc" name="Get Move Merge Id" id="3683eae9-8c6b-495a-8672-7720a96f48d5"><con:settings/><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:driver>oracle.jdbc.driver.OracleDriver</con:driver><con:connectionString>jdbc:oracle:thin:mars/mars@192.168.169.138:1561:IND400</con:connectionString><con:query>SELECT * FROM (SELECT * FROM MS_INTEGRATION_DATA_STORE WHERE ENTITY_NAME='MS_SALES' ORDER BY UPD_DT DESC) WHERE ROWNUM=1</con:query><con:properties/></con:config></con:testStep><con:testStep type="transfer" name="Transfer Transaction Id" id="725ac866-68d2-4cf3-9952-95fedbbdaab9"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Transfer Transaction Id</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>Get Move Merge Id</con:sourceStep><con:sourcePath>//TRANSACTION_ID</con:sourcePath><con:targetType>TransactionId</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="transfer" name="Transfer Move Merge Id" id="cdd01493-f711-48b7-afda-169db476f414"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" useXQuery="false" entitize="false" transferChildNodes="false"><con:name>Cdata to MovMrgId</con:name><con:sourceType>ResponseAsXml</con:sourceType><con:sourceStep>Get Move Merge Id</con:sourceStep><con:sourcePath>//MESSAGE</con:sourcePath><con:targetType>MovMrgTran</con:targetType><con:targetStep>#TestCase#</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="8ba5bfcd-7545-4efe-95ab-f02b675b1dc2"><con:settings/><con:config><script>def moveMergeData = context.expand('${#TestCase#MovMrgTran}')
+dataVals = moveMergeData.split('&lt;')
+context.testCase.setPropertyValue('MovMrgId', dataVals[1].split('>')[1])</script></con:config></con:testStep><con:testStep type="request" name="Get Move Merge Transactions" id="d4b19d88-3bea-4163-86ee-3e46f0a1f3cd"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>GetMoveMergeTransactions</con:operation><con:request name="Get Move Merge Transactions" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e3822533-e1bc-42ca-9300-2640ef22bb09"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:GetMoveMergeTransactions>
+         <!--Optional:-->
+         <mer:moveMergeID>${#TestCase#MovMrgId}</mer:moveMergeID>
+         <!--Optional:-->
+         <mer:entityName/>
+      </mer:GetMoveMergeTransactions>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="09efe934-021c-46b7-9cb6-77a80c57fbc0"/><con:assertion type="Simple Contains" name="Contains" id="2898af73-eba4-4d9e-b14e-2e5b76d02eb5"><con:configuration><token>MOVERMERGE_ID>${#TestCase#MovMrgId}&lt;/MOVERMERGE_ID></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.phxa.com/MARSIS/MergeMoveService/GetMoveMergeTransactions"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Get Move Merge Transactions By Range" id="8fceae94-794d-4973-ac75-a8a5c440d0b7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>GetMoveMergeTransactionsByRange</con:operation><con:request name="Get Move Merge Transactions By Range" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="17801675-d211-4005-8605-ff705bb04df4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:GetMoveMergeTransactionsByRange>
+         <!--Optional:-->
+         <mer:moveMergeID>${#TestCase#MovMrgId}</mer:moveMergeID>
+         <!--Optional:-->
+         <mer:entityName/>
+         <mer:start>1</mer:start>
+         <mer:end>100</mer:end>
+      </mer:GetMoveMergeTransactionsByRange>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response" id="56575cf9-a08a-43f5-8ea5-b542025ccda4"/><con:assertion type="Simple Contains" name="Contains" id="a8757fd8-c480-4aca-b9c1-51ade1dc5ca2"><con:configuration><token>&lt;MOVERMERGE_ID>${#TestCase#MovMrgId}&lt;/MOVERMERGE_ID></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>NTLM</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>NTLM</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://api.phxa.com/MARSIS/MergeMoveService/GetMoveMergeTransactionsByRange"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Update Move Merge Status" id="1f5dd9bf-d4c9-46ab-b123-470ab2a56390"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>MergeMoveServiceSoap</con:interface><con:operation>UpdateMoveMergeStatus</con:operation><con:request name="Update Move Merge Status" id="bb69fb6f-ab1b-4e74-9fbe-8ddb9c35c899"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://marsqa1.phxa.com/MIS/MergeMoveService.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:mer="http://api.phxa.com/MARSIS/MergeMoveService">
+   <soapenv:Header>
+      <mer:AuthHeader>
+         <!--Optional:-->
+         <mer:Username>${#Project#Username}</mer:Username>
+         <!--Optional:-->
+         <mer:Password>${#Project#Password}</mer:Password>
+      </mer:AuthHeader>
+   </soapenv:Header>
+   <soapenv:Body>
+      <mer:UpdateMoveMergeStatus>
+         <!--Optional:-->
+         <mer:transactionid>${#TestCase#TransactionId}</mer:transactionid>
+         <!--Optional:-->
+         <mer:status>C</mer:status>
+         <!--Optional:-->
+         <mer:message>?</mer:message>
+      </mer:UpdateMoveMergeStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="1bad03fe-cd92-4244-9b3c-3458b00a2f63"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:tearDownScript>testRunner.testCase.testSuite.project.testSuites["Scripts"].testCases["Reporting"].testSteps["CSVFile"].run(testRunner, context);</con:tearDownScript><con:properties><con:property><con:name>MovMrgTran</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property><con:property><con:name>MovMrgId</con:name><con:value>6648</con:value></con:property><con:property><con:name>MoveMergeId</con:name><con:value>1234</con:value></con:property><con:property><con:name>TransactionId</con:name><con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/></con:property></con:properties></con:testCase><con:properties/></con:testSuite>

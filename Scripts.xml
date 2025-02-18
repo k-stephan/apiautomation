@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite name="Scripts" id="f08e2eb0-77ab-4bd0-bd47-d3fe8f406ff3" disabled="true" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reporting" searchProperties="true" id="79c39281-8cde-4122-a129-22d56cba1fcb"><con:settings/><con:testStep type="groovy" name="CSVFile TearDown" id="b24dd06d-c607-43bd-97f3-ba9da4902ab7"><con:settings/><con:config><script>testRunner.testCase.testSuite.project.testSuites["Scripts"].testCases["Reporting"].testSteps["CSVFile"].run(testRunner, context);</script></con:config></con:testStep><con:testStep type="groovy" name="CSVFile" id="47161742-abb5-4851-a8ef-69e19982c3b3"><con:settings/><con:config><script>try {
+    //Check a project level property to see if the reports should be produced.
+    if(context.expand('${#Project#ProduceReports}') == 'true') {
+        //The path and file to persist results
+        def resultDir = new File("D:\\SoapUIResults");
+        if(!resultDir.exists()) {
+            resultDir.mkdirs();
+        }
+        def fileDate = new Date() 
+        def resultsFile = new File(resultDir, "Test_Execution_Report_" + fileDate.format("dd-MMM-yy") + ".csv" );
+
+        //If the file does not already exist, we want to create it, otherwise we want to append
+        if(!resultsFile.exists()) {
+            resultsFile.createNewFile();
+            //Header values
+            resultsFile.write('"TESTCASE NAME","TEST RESULT","MESSAGES","EXECUTION DATE"');
+        }
+
+        //Write the result values
+        resultsFile.append('\n');    //Newline
+        resultsFile.append('"' + testRunner.testCase.name + '",');    //Test Case Name
+        resultsFile.append('"' + testRunner.status + '",');    //Overall Test Case result
+
+        //There can be multiple messages, so set up a loop
+        resultsFile.append('"');    //Start of messages.
+        for(result in testRunner.getResults()) {
+            //There can be lots of messages, so limit amount recorded to avoid going over
+            //the buffer size for a CSV field
+            msgCount = 0;
+            for(message in result.getMessages()) {
+                msgCount++;
+                if(msgCount &lt; 10) {
+                	message = message.replaceAll( /[\n]+/, "\t")
+                	message = message.replaceAll( ",", ";")
+                    resultsFile.append(message + ';\t');
+                }
+            }
+        }
+
+        resultsFile.append('",');    //End of messages.
+
+        def currentDate = new Date().format("yyyy-MM-dd hh:mm");
+        resultsFile.append('"' + currentDate + '"');
+    }
+} catch(e) {
+    log.error("An error occurred: " + e.toString());
+}</script></con:config></con:testStep><con:testStep type="groovy" name="Populate TearDown Script" id="75bc6541-33a5-49bf-ad62-e06180d2808a"><con:settings/><con:config><script>try {
+    def tearDown = testRunner.testCase.testSteps["CSVFile TearDown"].getScript();
+
+    def project = testRunner.testCase.testSuite.project;
+
+    //Loop through each Test Suite
+    for(suite in project.getTestSuiteList()) {
+        //Do not want to add script to test cases in Scripts Suite.
+        if(!suite.name.startsWith("Scripts")) {
+            //Loop through each Test Case
+            for(tcase in suite.getTestCaseList()) {
+                tcase.setTearDownScript(tearDown);
+            }
+        }
+    }
+} catch(e) {
+    log.error(e.toString());
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite>
